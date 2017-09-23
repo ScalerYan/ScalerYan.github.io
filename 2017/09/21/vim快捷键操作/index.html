@@ -13,19 +13,14 @@
     <meta name="author" content="Scaler">
     
     <meta name="description" content="本文整理了一些常见的文本编辑工具vim的快捷方式,在日常工作中这些几乎够我们用的了.
-光标移动
-单个字符移动
-h：向左移动
+光标移动单个字符移动h：向左移动
 i：向右移动
 j：向下移动
 k：向上移动
-
-
-单词移动
-w：将光标移动到下一个单词的开头
+单词移动w：将光标移动到下一个单词的开头
 b：将光标移动到前一个单词的开头
 e：将光标移动到下一个单词的末尾
-E：移动到单词的结">
+E：移动到单词的结尾(忽略标">
     
     
     
@@ -69,7 +64,7 @@ E：移动到单词的结">
 					
 						<li><a href="/archives">归档</a></li>
 					
-						<li><a href="/technology">技术</a></li>
+						<li><a href="/categories">技术</a></li>
 					
 						<li><a href="/about">About</a></li>
 					
@@ -99,7 +94,7 @@ E：移动到单词的结">
     </p>
   <p class="article-time">
     <time datetime="2017-09-21T20:53:19.000Z" itemprop="datePublished">2017-09-21</time>
-    更新日期:<time datetime="2017-09-22T15:06:12.371Z" itemprop="dateModified">2017-09-22</time>
+    更新日期:<time datetime="2017-09-23T02:06:10.000Z" itemprop="dateModified">2017-09-22</time>
     
   </p>
 </header>
@@ -108,141 +103,92 @@ E：移动到单词的结">
 		
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
-		<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#光标移动"><span class="toc-number">1.</span> <span class="toc-text">光标移动</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#滚屏与跳转"><span class="toc-number">2.</span> <span class="toc-text">滚屏与跳转</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文本插入操作"><span class="toc-number">3.</span> <span class="toc-text">文本插入操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文本删除"><span class="toc-number">4.</span> <span class="toc-text">文本删除</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文本复制、剪切与粘贴"><span class="toc-number">5.</span> <span class="toc-text">文本复制、剪切与粘贴</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文本查找与替换"><span class="toc-number">6.</span> <span class="toc-text">文本查找与替换</span></a></li></ol>
+		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#光标移动"><span class="toc-number">1.</span> <span class="toc-text">光标移动</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#单个字符移动"><span class="toc-number">1.1.</span> <span class="toc-text">单个字符移动</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#单词移动"><span class="toc-number">1.2.</span> <span class="toc-text">单词移动</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#行移动"><span class="toc-number">1.3.</span> <span class="toc-text">行移动</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文本块移动"><span class="toc-number">1.4.</span> <span class="toc-text">文本块移动</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#在屏幕中移动"><span class="toc-number">1.5.</span> <span class="toc-text">在屏幕中移动</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#滚屏与跳转"><span class="toc-number">2.</span> <span class="toc-text">滚屏与跳转</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#文本插入操作"><span class="toc-number">3.</span> <span class="toc-text">文本插入操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#文本删除"><span class="toc-number">4.</span> <span class="toc-text">文本删除</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#字符删除"><span class="toc-number">4.1.</span> <span class="toc-text">字符删除</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#单词删除"><span class="toc-number">4.2.</span> <span class="toc-text">单词删除</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#删除行"><span class="toc-number">4.3.</span> <span class="toc-text">删除行</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#行合并"><span class="toc-number">4.4.</span> <span class="toc-text">行合并</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#文本复制、剪切与粘贴"><span class="toc-number">5.</span> <span class="toc-text">文本复制、剪切与粘贴</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#文本查找与替换"><span class="toc-number">6.</span> <span class="toc-text">文本查找与替换</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#字符串查找"><span class="toc-number">6.1.</span> <span class="toc-text">字符串查找</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#设置高亮显示"><span class="toc-number">6.2.</span> <span class="toc-text">设置高亮显示</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#字符串替换"><span class="toc-number">6.3.</span> <span class="toc-text">字符串替换</span></a></li></ol></li></ol>
 		</div>
 		
 		<p>本文整理了一些常见的文本编辑工具vim的快捷方式,在日常工作中这些几乎够我们用的了.</p>
-<h3 id="光标移动"><a href="#光标移动" class="headerlink" title="光标移动"></a>光标移动</h3><ul>
-<li>单个字符移动<br><ul>
-<li>h：向左移动</li>
-<li>i：向右移动</li>
-<li>j：向下移动</li>
-<li>k：向上移动</li>
-</ul>
-</li>
-<li>单词移动<br><ul>
-<li>w：将光标移动到下一个单词的开头</li>
-<li>b：将光标移动到前一个单词的开头</li>
-<li>e：将光标移动到下一个单词的末尾</li>
-<li>E：移动到单词的结尾(忽略标点符号)</li>
-<li>ge：将光标移动到上一个单词的词末</li>
-<li>2w：指定移动的次数</li>
-</ul>
-</li>
-<li>行移动<br><ul>
-<li>$：将光标移动到当前行的行尾</li>
-<li>0：将光标移动到当前行的行首</li>
-<li>^：将光标移动到当前行的第一个非空字符</li>
-<li>2|：移动到当前行的第二列</li>
-<li>fx：将光标移动到当前行光标所在位置向后的第1个x上</li>
-<li>3fx：将光标移动到当前行光标所在位置向后的第3个x上</li>
-<li>tx：将光标移动到当前光标所在位置向后的第1个x的前一个字符上</li>
-<li>%：用于符号之间的移动，它会在一对()、[]、{}之间跳跃</li>
-</ul>
-</li>
-<li>文本块移动<br><ul>
-<li>(：移到当前句子的开头</li>
-<li>)：移到下一个句子的开头 </li>
-<li>{：移到当前一段的开头 </li>
-<li>}：移到下一段的开头</li>
-<li>[[：移到当前这一节的开头 </li>
-<li>]]：移到下一节的开头</li>
-</ul>
-</li>
-<li>在屏幕中移动<ul>
-<li>xG: 跳转到指定的第 x 行</li>
-<li>G 移动到文件按末尾, ‘’(2 次单引号)返回到跳转前的位置</li>
-<li>gg: 移动到文件开头</li>
-<li>x%: 移动到文件中间,就使用 50%</li>
-<li>H: 移动到 home</li>
-<li>M: 移动到屏幕中间</li>
-<li>L: 移动到一屏末尾</li>
-<li>ctrl+G: 查看当前的位置状态 </li>
-</ul>
-</li>
-</ul>
-<h3 id="滚屏与跳转"><a href="#滚屏与跳转" class="headerlink" title="滚屏与跳转"></a>滚屏与跳转</h3><ul>
-<li>半屏滚动：ctrl+u/ctrl+d</li>
-<li>全屏滚动：ctrl+f/ctrl+b</li>
-<li>定位光标的位置</li>
-<li>zz：将光标置于屏幕的中间</li>
-<li>zt：将光标置于屏幕的顶部</li>
-<li>zb：将光标置于屏幕的底部</li>
-</ul>
-<h3 id="文本插入操作"><a href="#文本插入操作" class="headerlink" title="文本插入操作"></a>文本插入操作</h3><ul>
-<li>i：在当前光标的前面插入字符</li>
-<li>a：在当前光标的后面追加字符</li>
-<li>o：在当前光标的下一行行首插入字符，插入空白行</li>
-<li>I：在一行的开头添加文本</li>
-<li>A：在一行的结尾添加文本</li>
-<li>O：在光标当前行的上一行插入文本</li>
-<li>s：删除当前光标处的字符并进入到插入模式</li>
-<li>S：删除当前光标所处的行并进入到插入模式</li>
-<li>u：撤销</li>
-</ul>
-<h3 id="文本删除"><a href="#文本删除" class="headerlink" title="文本删除"></a>文本删除</h3><ul>
-<li>字符删<ul>
-<li>x：删除当前光标所在处的字符</li>
-<li>X：删除当前光标左边的字符</li>
-</ul>
-</li>
-<li>单词删除<ul>
-<li>dw：删除一个单词(从光标处到空格)</li>
-<li>daw：删除光标所在的整个单词(包括空格字符)</li>
-<li>diw：删除整个单词文本,但是保留空格字符不删除 </li>
-<li>d2w: 删除从当前光标开始处的2个单词</li>
-<li>d$：删除从光标到一行末尾的整个文本</li>
-<li>d0：删除从光标到一行开头的所有单词</li>
-<li>dl： 删除当前光标处的字符=x</li>
-<li>dh： 删除当前光标左边的字符=X</li>
-</ul>
-</li>
-<li>删除行<ul>
-<li>dd: 删除当前光标处的一整行=D</li>
-<li>5dd: 删除从光标开始处的 5 行代码 </li>
-<li>dgg: 删除从光标到文本开头 </li>
-<li>dG: 删除从光标到文本结尾</li>
-</ul>
-</li>
-<li>行合并<ul>
-<li>J：删除一个分行符,将当前行与下一行合并</li>
-</ul>
-</li>
-</ul>
-<h3 id="文本复制、剪切与粘贴"><a href="#文本复制、剪切与粘贴" class="headerlink" title="文本复制、剪切与粘贴"></a>文本复制、剪切与粘贴<br></h3><ul>
-<li>y: 复制,   p:粘贴</li>
-<li>yw: 复制一个单词</li>
-<li>y2w: 复制 2 个单词</li>
-<li>y$: 复制从当前光标到行结尾的所有单词</li>
-<li>y0: 复制从当前光标到行首的所有单词</li>
-<li>yy: 复制一整行</li>
-<li>2yy: 复制从当前光标所在行开始的2行</li>
-<li>复制文本快<pre><code>1. 首先进入 visual 模式:v 2. 移动光标选择文本 3.复制与粘贴的操作
-</code></pre></li>
-</ul>
-<h3 id="文本查找与替换"><a href="#文本查找与替换" class="headerlink" title="文本查找与替换"></a>文本查找与替换</h3><ul>
-<li>字符串查找<ul>
-<li>/string 正向查找</li>
-<li>?string 反向查找</li>
-</ul>
-</li>
-<li>设置高亮显示<ul>
-<li>：set hls</li>
-<li>*按键将当前光标的单词高亮显示使用n浏览下一个查找高亮的结果</li>
-</ul>
-</li>
-<li>字符串替换<ul>
-<li>:s/old/new 将当前行的第一个字符串old替换为 new </li>
-<li>:s/old/new/g 将当前行的所有字符串old替换为 new </li>
-<li>:90s/old/new/g 将指定行的所有字符串old替换为 new </li>
-<li>:90,93s/old/new/g 将90到93行的所有字符串old替换为new </li>
-<li>:%s/old/new/g 将文本中所有的字符串 old 替换为 new </li>
-<li>:%s/old/new/gc 依次替换每个字符串关键字 </li>
-<li>:%s/^struct/int/g 将所有以 struct 开头的字符串替换为 int</li>
-</ul>
-</li>
-</ul>
-  
+<h2 id="光标移动"><a href="#光标移动" class="headerlink" title="光标移动"></a>光标移动</h2><h3 id="单个字符移动"><a href="#单个字符移动" class="headerlink" title="单个字符移动"></a>单个字符移动<br></h3><pre><code>h：向左移动
+i：向右移动
+j：向下移动
+k：向上移动
+</code></pre><h3 id="单词移动"><a href="#单词移动" class="headerlink" title="单词移动"></a>单词移动<br></h3><pre><code>w：将光标移动到下一个单词的开头
+b：将光标移动到前一个单词的开头
+e：将光标移动到下一个单词的末尾
+E：移动到单词的结尾(忽略标点符号)
+ge：将光标移动到上一个单词的词末
+2w：指定移动的次数
+</code></pre><h3 id="行移动"><a href="#行移动" class="headerlink" title="行移动"></a>行移动<br></h3><pre><code>$：将光标移动到当前行的行尾
+0：将光标移动到当前行的行首
+^：将光标移动到当前行的第一个非空字符
+2|：移动到当前行的第二列
+fx：将光标移动到当前行光标所在位置向后的第1个x上
+3fx：将光标移动到当前行光标所在位置向后的第3个x上
+tx：将光标移动到当前光标所在位置向后的第1个x的前一个字符上
+%：用于符号之间的移动，它会在一对()、[]、{}之间跳跃
+</code></pre><h3 id="文本块移动"><a href="#文本块移动" class="headerlink" title="文本块移动"></a>文本块移动<br></h3><pre><code>(：移到当前句子的开头
+)：移到下一个句子的开头 
+{：移到当前一段的开头 
+}：移到下一段的开头
+[[：移到当前这一节的开头 
+]]：移到下一节的开头
+</code></pre><h3 id="在屏幕中移动"><a href="#在屏幕中移动" class="headerlink" title="在屏幕中移动"></a>在屏幕中移动</h3><pre><code>xG: 跳转到指定的第 x 行
+G 移动到文件按末尾, &apos;&apos;(2 次单引号)返回到跳转前的位置
+gg: 移动到文件开头
+x%: 移动到文件中间,就使用 50%
+H: 移动到 home
+M: 移动到屏幕中间
+L: 移动到一屏末尾
+ctrl+G: 查看当前的位置状态 
+</code></pre><h2 id="滚屏与跳转"><a href="#滚屏与跳转" class="headerlink" title="滚屏与跳转"></a>滚屏与跳转</h2><pre><code>半屏滚动：ctrl+u/ctrl+d
+全屏滚动：ctrl+f/ctrl+b
+定位光标的位置
+zz：将光标置于屏幕的中间
+zt：将光标置于屏幕的顶部
+zb：将光标置于屏幕的底部
+</code></pre><h2 id="文本插入操作"><a href="#文本插入操作" class="headerlink" title="文本插入操作"></a>文本插入操作</h2><pre><code>i：在当前光标的前面插入字符
+a：在当前光标的后面追加字符
+o：在当前光标的下一行行首插入字符，插入空白行
+I：在一行的开头添加文本
+A：在一行的结尾添加文本
+O：在光标当前行的上一行插入文本
+s：删除当前光标处的字符并进入到插入模式
+S：删除当前光标所处的行并进入到插入模式
+u：撤销
+</code></pre><h2 id="文本删除"><a href="#文本删除" class="headerlink" title="文本删除"></a>文本删除</h2><h3 id="字符删除"><a href="#字符删除" class="headerlink" title="字符删除"></a>字符删除</h3><pre><code>x：删除当前光标所在处的字符
+X：删除当前光标左边的字符
+</code></pre><h3 id="单词删除"><a href="#单词删除" class="headerlink" title="单词删除"></a>单词删除</h3><pre><code>dw：删除一个单词(从光标处到空格)
+daw：删除光标所在的整个单词(包括空格字符)
+diw：删除整个单词文本,但是保留空格字符不删除 
+d2w: 删除从当前光标开始处的2个单词
+d$：删除从光标到一行末尾的整个文本
+d0：删除从光标到一行开头的所有单词
+dl： 删除当前光标处的字符=x
+dh： 删除当前光标左边的字符=X
+</code></pre><h3 id="删除行"><a href="#删除行" class="headerlink" title="删除行"></a>删除行</h3><pre><code>dd: 删除当前光标处的一整行=D
+5dd: 删除从光标开始处的 5 行代码 
+dgg: 删除从光标到文本开头 
+dG: 删除从光标到文本结尾
+</code></pre><h3 id="行合并"><a href="#行合并" class="headerlink" title="行合并"></a>行合并</h3><pre><code>J：删除一个分行符,将当前行与下一行合并
+</code></pre><h2 id="文本复制、剪切与粘贴"><a href="#文本复制、剪切与粘贴" class="headerlink" title="文本复制、剪切与粘贴"></a>文本复制、剪切与粘贴<br></h2><pre><code>y: 复制,   p:粘贴
+yw: 复制一个单词
+y2w: 复制 2 个单词
+y$: 复制从当前光标到行结尾的所有单词
+y0: 复制从当前光标到行首的所有单词
+yy: 复制一整行
+2yy: 复制从当前光标所在行开始的2行
+复制文本快: 1. 首先进入 visual 模式:v 2. 移动光标选择文本 3.复制与粘贴的操作
+</code></pre><h2 id="文本查找与替换"><a href="#文本查找与替换" class="headerlink" title="文本查找与替换"></a>文本查找与替换</h2><h3 id="字符串查找"><a href="#字符串查找" class="headerlink" title="字符串查找"></a>字符串查找</h3><pre><code>/string 正向查找
+?string 反向查找
+</code></pre><h3 id="设置高亮显示"><a href="#设置高亮显示" class="headerlink" title="设置高亮显示"></a>设置高亮显示</h3><pre><code>：set hls
+*按键将当前光标的单词高亮显示使用n浏览下一个查找高亮的结果
+</code></pre><h3 id="字符串替换"><a href="#字符串替换" class="headerlink" title="字符串替换"></a>字符串替换</h3><pre><code>:s/old/new 将当前行的第一个字符串old替换为 new 
+:s/old/new/g 将当前行的所有字符串old替换为 new 
+:90s/old/new/g 将指定行的所有字符串old替换为 new 
+:90,93s/old/new/g 将90到93行的所有字符串old替换为new 
+:%s/old/new/g 将文本中所有的字符串 old 替换为 new 
+:%s/old/new/gc 依次替换每个字符串关键字 
+:%s/^struct/int/g 将所有以 struct 开头的字符串替换为 int
+</code></pre>  
 	</div>
 		<footer class="article-footer clearfix">
 
@@ -294,7 +240,7 @@ E：移动到单词的结">
 
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
-  <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#光标移动"><span class="toc-number">1.</span> <span class="toc-text">光标移动</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#滚屏与跳转"><span class="toc-number">2.</span> <span class="toc-text">滚屏与跳转</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文本插入操作"><span class="toc-number">3.</span> <span class="toc-text">文本插入操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文本删除"><span class="toc-number">4.</span> <span class="toc-text">文本删除</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文本复制、剪切与粘贴"><span class="toc-number">5.</span> <span class="toc-text">文本复制、剪切与粘贴</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文本查找与替换"><span class="toc-number">6.</span> <span class="toc-text">文本查找与替换</span></a></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#光标移动"><span class="toc-number">1.</span> <span class="toc-text">光标移动</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#单个字符移动"><span class="toc-number">1.1.</span> <span class="toc-text">单个字符移动</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#单词移动"><span class="toc-number">1.2.</span> <span class="toc-text">单词移动</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#行移动"><span class="toc-number">1.3.</span> <span class="toc-text">行移动</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文本块移动"><span class="toc-number">1.4.</span> <span class="toc-text">文本块移动</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#在屏幕中移动"><span class="toc-number">1.5.</span> <span class="toc-text">在屏幕中移动</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#滚屏与跳转"><span class="toc-number">2.</span> <span class="toc-text">滚屏与跳转</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#文本插入操作"><span class="toc-number">3.</span> <span class="toc-text">文本插入操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#文本删除"><span class="toc-number">4.</span> <span class="toc-text">文本删除</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#字符删除"><span class="toc-number">4.1.</span> <span class="toc-text">字符删除</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#单词删除"><span class="toc-number">4.2.</span> <span class="toc-text">单词删除</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#删除行"><span class="toc-number">4.3.</span> <span class="toc-text">删除行</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#行合并"><span class="toc-number">4.4.</span> <span class="toc-text">行合并</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#文本复制、剪切与粘贴"><span class="toc-number">5.</span> <span class="toc-text">文本复制、剪切与粘贴</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#文本查找与替换"><span class="toc-number">6.</span> <span class="toc-text">文本查找与替换</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#字符串查找"><span class="toc-number">6.1.</span> <span class="toc-text">字符串查找</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#设置高亮显示"><span class="toc-number">6.2.</span> <span class="toc-text">设置高亮显示</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#字符串替换"><span class="toc-number">6.3.</span> <span class="toc-text">字符串替换</span></a></li></ol></li></ol>
   </div>
 
 <div id="asidepart">
